@@ -1,11 +1,13 @@
 package org.example.SolidPrinciples;
 
 // TODO: Dependency Inversion:
-/*se referă la relația dintre modulele software. Acest principiu afirmă că modulele de nivel
-superior nu ar trebui să depindă de modulele de nivel inferior, iar ambele ar trebui să depindă de abstracțiuni.
+/*The Dependency Inversion principle states that our classes
+  should depend upon interfaces or abstract classes instead of
+  concrete classes and functions.
 */
-public abstract class FunctionCar implements Drive, Maintenance{
+public abstract class FunctionCar implements Drive, Maintenance {
     private boolean engineStarted;
+
     @Override
     public boolean startEngine() {
         this.engineStarted = true;
@@ -15,7 +17,7 @@ public abstract class FunctionCar implements Drive, Maintenance{
 
     @Override
     public boolean accelerate(int speed) {
-        if (speed > 50){
+        if (speed > 50) {
             System.out.println("Accelerating");
         }
         return true;
